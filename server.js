@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 
-const table = cTable.getTable([  ]);
+console.table()
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
