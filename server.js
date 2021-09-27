@@ -1,6 +1,7 @@
-const express = require('express');
-const db = require('./db/connection');
+const db = require('./routes/apiRoutes/connection');
 const apiRoutes = require('./routes/apiRoutes');
+const cTable = require('console.table');
+const inquirer = require("inquirer");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -11,6 +12,9 @@ app.use(express.json());
 
 // Use apiRoutes
 app.use('/api', apiRoutes);
+
+
+const table = cTable.getTable([  ]);
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
