@@ -1,7 +1,5 @@
-const db = require('./routes/apiRoutes/connection');
-const apiRoutes = require('./routes/apiRoutes');
+const db = require('./utils/connection');
 const cTable = require('console.table');
-const inquirer = require("inquirer");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,8 +8,6 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Use apiRoutes
-app.use('/api', apiRoutes);
 
 
 const table = cTable.getTable([  ]);
